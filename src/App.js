@@ -71,6 +71,19 @@ function App() {
     setEvents(newEvents)
   }
 
+  const loadSavedData = () => {
+    const savedEvents = localStorage.getItem('savedEvents');
+    const savedNumberOfEvents = localStorage.getItem('savedNumberOfEvents');
+  
+    if (savedEvents && savedNumberOfEvents) {
+      setEvents(JSON.parse(savedEvents));
+      setNumberOfEvents(JSON.parse(savedNumberOfEvents));
+    } else {
+      // Handle case when no data is saved
+      alert("No saved data found!");
+    }
+  }
+
   const processSchedules = () => {
     const newProcessedData = events.map((event) => {
       const parsedData = extractEventData(event.schedule)
@@ -80,6 +93,9 @@ function App() {
       }
     })
     setProcessedData(newProcessedData)
+
+    localStorage.setItem('savedEvents', JSON.stringify(events));
+    localStorage.setItem('savedNumberOfEvents', JSON.stringify(numberOfEvents));
   }
 
   return (
@@ -106,6 +122,7 @@ function App() {
           />
         ))}
 
+        <button onClick={loadSavedData}>Load Saved Data</button>
         <button onClick={processSchedules}>Process Schedules</button>
       </div>
 
