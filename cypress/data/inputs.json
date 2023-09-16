@@ -1,0 +1,147 @@
+{
+  "classes": [
+      {
+          "name": "Interactive Systems and Computer Graphics Tutorial",
+          "schedule": [
+              "Sun(22/10/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 402 M",
+              "Mon(23/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Tue(24/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Wed(25/10/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 531 A",
+              "Thu(26/10/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 207 M",
+              "Sun(29/10/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 207 M",
+              "Mon(30/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Tue(31/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Wed(01/11/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 101 M",
+              "Thu(02/11/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Mon(06/11/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Mon(13/11/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Mon(20/11/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Mon(27/11/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall"
+          ]
+      },
+      {
+          "name": "Data Analytics and Visualisation",
+          "schedule": [
+              "Sun(12/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 402 M",
+              "Mon(13/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 402 M",
+              "Tue(14/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 240 S Lecture Hall",
+              "Mon(13/11/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 402 M",
+              "Wed(15/11/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 403 M",
+              "Wed(15/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 403 M",
+              "Thu(16/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 403 M",
+              "Thu(16/11/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 403 M",
+              "Sun(19/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 403 M",
+              "Mon(20/11/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 531 A",
+              "Mon(20/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 403 M",
+              "Tue(21/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 531 A",
+              "Wed(22/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 531 A",
+              "Sun(26/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 531 A",
+              "Mon(27/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 531 A",
+              "Mon(27/11/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 531 A",
+              "Tue(28/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 531 A",
+              "Wed(29/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 531 A",
+              "Wed(29/11/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 531 A",
+              "Thu(30/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 531 A",
+              "Thu(30/11/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 531 A"
+          ]
+      },
+      {
+          "name": "Cryptography and Blockchain",
+          "schedule": [
+              "Sun(17/09/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 239 S",
+              "Sun(17/09/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 239 S",
+              "Mon(18/09/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Mon(18/09/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Tue(19/09/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Wed(20/09/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Wed(20/09/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 239 S",
+              "Thu(21/09/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 239 S",
+              "Thu(21/09/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Thu(21/09/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 239 S",
+              "Sun(24/09/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 239 S",
+              "Sun(24/09/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 239 S",
+              "Mon(25/09/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Mon(25/09/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Tue(26/09/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Wed(27/09/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Wed(27/09/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 239 S",
+              "Thu(28/09/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Thu(28/09/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 239 S",
+              "Thu(28/09/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 239 S",
+              "Sun(01/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall"
+          ]
+      },
+      {
+          "name": "Seminar",
+          "schedule": [
+              "Thu(21/09/2023) :: 04:00 PM - 06:00 PM::GU1-GU1 207 M",
+              "Thu(05/10/2023) :: 04:00 PM - 06:00 PM::GU1-GU1 207 M",
+              "Thu(30/11/2023) :: 04:00 PM - 06:00 PM::GU1-GU1 207 M",
+              "Thu(14/12/2023) :: 04:00 PM - 06:00 PM::GU1-GU1 207 M"
+          ]
+      },
+      {
+          "name": "Interactive Systems and Computer Graphics Lecture",
+          "schedule": [
+              "Sun(22/10/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 207 M",
+              "Sun(22/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 207 M",
+              "Sun(22/10/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 207 M",
+              "Mon(23/10/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Mon(23/10/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 240 S Lecture Hall",
+              "Tue(24/10/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Tue(24/10/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 239 S",
+              "Wed(25/10/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Wed(25/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 239 S",
+              "Thu(26/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Thu(26/10/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 240 S Lecture Hall",
+              "Sun(29/10/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 448 A",
+              "Sun(29/10/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 448 A",
+              "Sun(29/10/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 448 A",
+              "Mon(30/10/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 448 A",
+              "Mon(30/10/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 448 A",
+              "Tue(31/10/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Tue(31/10/2023) :: 12:00 PM - 02:00 PM::GU1-GU1 239 S",
+              "Wed(01/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S",
+              "Wed(01/11/2023) :: 10:00 AM - 12:00 PM::GU1-GU1 239 S",
+              "Thu(02/11/2023) :: 08:00 AM - 10:00 AM::GU1-GU1 239 S"
+          ]
+      },
+      {
+          "name": "Intelligent Transport Systems Tutorial",
+          "schedule": [
+              "Sun(17/09/2023) :: 04:00 PM - 06:00 PM::GU1-Virtual 401 M",
+              "Sun(24/09/2023) :: 04:00 PM - 06:00 PM::GU1-Virtual 404 M",
+              "Sun(01/10/2023) :: 04:00 PM - 06:00 PM::GU1-Virtual 404 M",
+              "Sun(08/10/2023) :: 04:00 PM - 06:00 PM::GU1-Virtual 404 M",
+              "Sun(15/10/2023) :: 04:00 PM - 06:00 PM::GU1-Virtual 404 M",
+              "Sun(22/10/2023) :: 04:00 PM - 06:00 PM::GU1-Virtual 402 M",
+              "Mon(23/10/2023) :: 04:00 PM - 06:00 PM::GU1-Virtual 402 M"
+          ]
+      },
+      {
+          "name": "Intelligent Transport Systems Lecture",
+          "schedule": [
+              "Tue(31/10/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 101 M",
+              "Tue(31/10/2023) :: 04:00 PM - 06:00 PM::GU1-GU1 101 M",
+              "Wed(01/11/2023) :: 12:00 PM - 02:00 PM::GU2-GU2 001",
+              "Thu(02/11/2023) :: 04:00 PM - 06:00 PM::GU2-GU2 001"
+          ]
+      },
+      {
+          "name": "Cryptography and Blockchain Tutorial",
+          "schedule": [
+              "Sun(17/09/2023) :: 04:00 PM - 06:00 PM::GU1-GU1 239 S",
+              "Mon(18/09/2023) :: 04:00 PM - 06:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Tue(19/09/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 239 S",
+              "Wed(20/09/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 239 S",
+              "Mon(25/09/2023) :: 04:00 PM - 06:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Tue(26/09/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Wed(27/09/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 240 S Lecture Hall",
+              "Sun(01/10/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 531 A",
+              "Mon(02/10/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 531 A",
+              "Mon(09/10/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 531 A",
+              "Mon(16/10/2023) :: 02:00 PM - 04:00 PM::GU1-GU1 531 A"
+          ]
+      }
+  ]
+}
