@@ -1,20 +1,66 @@
 import React, { useState, useEffect } from "react"
-import "./App.css"
-// import CalendarView from './components/calendar';
 import FullCalendar from "@fullcalendar/react"
 import dayGridPlugin from "@fullcalendar/daygrid"
-import moment from "moment"
 import generateRandomColor from "./utils/generateRandomColors"
+import {
+  extractEventData,
+  transformToFullCalendarEvents,
+} from "./utils/eventUtils"
+import EventInput from "./components/EventInput"
+import { useTheme } from "./components/ThemeContext"
+import Header from "./components/Header"
+import "./App.css"
 
 function App() {
   const [numberOfEvents, setNumberOfEvents] = useState(0)
   const [events, setEvents] = useState([])
   const [processedData, setProcessedData] = useState([])
   const [calendarEvents, setCalendarEvents] = useState([])
+  const { theme, toggleTheme } = useTheme()
+  const [showHeader, setShowHeader] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
-    setCalendarEvents(transformToFullCalendarEvents(processedData))
+    // This will apply the theme attribute to the body, which controls the CSS theming.
+    document.body.setAttribute("data-theme", theme)
+  }, [theme])
+
+  useEffect(() => {
+    setCalendarEvents(
+      transformToFullCalendarEvents(processedData, generateRandomColor)
+    )
   }, [processedData])
+
+  // Header bar interaction
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setShowHeader(false)
+      } else {
+        // Scrolling up
+        setShowHeader(true)
+      }
+
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [lastScrollY])
+
+  const handleNumberOfEventsChange = (value) => {
+    const numOfEvents = Number(value)
+    setEvents(
+      Array.from({ length: numOfEvents }, () => ({ name: "", schedule: "" }))
+    )
+    setNumberOfEvents(value)
+  }
 
   const handleEventChange = (index, key, value) => {
     const newEvents = [...events]
@@ -27,155 +73,39 @@ function App() {
 
   const processSchedules = () => {
     const newProcessedData = events.map((event) => {
-      const lines = event.schedule.split("\n")
-      const parsedData = {}
-
-      lines.forEach((line) => {
-        const dateMatch = line.match(/^(\w{3})\((\d{2}\/\d{2}\/\d{4})\)/)
-        const timeMatch = line.match(
-          /:: (\d{2}:\d{2} [APM]{2}) - (\d{2}:\d{2} [APM]{2})::/
-        )
-
-        if (dateMatch && timeMatch) {
-          const dayOfWeek = dateMatch[1]
-          const date = dateMatch[2]
-          const startTime = timeMatch[1]
-          const endTime = timeMatch[2]
-
-          if (!parsedData[date]) {
-            parsedData[date] = []
-          }
-
-          parsedData[date].push({
-            dayOfWeek,
-            startTime,
-            endTime,
-          })
-        }
-      })
-
+      const parsedData = extractEventData(event.schedule)
       return {
         name: event.name,
         data: parsedData,
       }
     })
-
     setProcessedData(newProcessedData)
-    console.log(newProcessedData)
-  }
-
-  const transformToFullCalendarEvents = (data) => {
-    const events = []
-    const titleColorMapping = {}
-
-    data.forEach((eventItem) => {
-      Object.entries(eventItem.data).forEach(([date, times]) => {
-        // console.log(date)
-        // console.log(times)
-        times.forEach((time) => {
-          const startDateTime = moment(
-            `${date} ${time.startTime}`,
-            "DD/MM/YYYY hh:mm A"
-          ).toDate()
-          const endDateTime = moment(
-            `${date} ${time.endTime}`,
-            "DD/MM/YYYY hh:mm A"
-          ).toDate()
-
-          // console.log(time)
-          // console.log(typeof(date))
-          // console.log(startDateTime)
-          // console.log(endDateTime)
-          if (startDateTime === "Invalid date") {
-            console.log("Start date is invalid, " + startDateTime)
-          }
-          if (endDateTime === "Invalid date") {
-            console.log("End date is invalid, " + endDateTime)
-          }
-
-          // Assign a color if not already assigned
-          if (!titleColorMapping[eventItem.name]) {
-            titleColorMapping[eventItem.name] = generateRandomColor()
-          }
-
-          events.push({
-            title: eventItem.name,
-            start: startDateTime,
-            end: endDateTime,
-            backgroundColor: titleColorMapping[eventItem.name],
-            display: "block",
-          })
-        })
-      })
-    })
-
-    // console.log(events)
-
-    return events
   }
 
   return (
     <div className="App">
+      <Header theme={theme} toggleTheme={toggleTheme} showHeader={showHeader} />
+
+      <div className="num-courses-input-group">
+        <label>Number of Events:</label>
+        <input
+          name="numberOfCourses"
+          type="number"
+          value={numberOfEvents}
+          onChange={(e) => handleNumberOfEventsChange(e.target.value)}
+        />
+      </div>
+
       <div className="inputs-container">
-        <label>
-          Number of Events:
-          <input
-            name="numberOfCourses"
-            type="number"
-            value={numberOfEvents}
-            onChange={(e) => {
-              const numOfEvents = Number(e.target.value)
-              const newEvents = Array.from({ length: numOfEvents }, () => ({
-                name: "",
-                schedule: "",
-              }))
-              setEvents(newEvents)
-
-              setNumberOfEvents(e.target.value)
-              // setEvents(
-              //   new Array(Number(e.target.value)).fill({
-              //     name: "",
-              //     schedule: "",
-              //   })
-              // )
-            }}
-          />
-        </label>
         {events.map((event, index) => (
-          <div key={index}>
-            {/* <label>
-              Event Name:
-            </label>
-            <input 
-              name={`course-${index + 1}-name`}
-              type="text" 
-              value={event.name} 
-              onChange={(e) => handleEventChange(index, 'name', e.target.value)}
-            /> */}
-
-            <div className="input-group">
-              <label>Event Name:</label>
-              <input
-                name={`course-${index + 1}-name`}
-                type="text"
-                value={event.name}
-                onChange={(e) =>
-                  handleEventChange(index, "name", e.target.value)
-                }
-              />
-            </div>
-
-            <textarea
-              name={`course-${index + 1}-schedule`}
-              value={event.schedule}
-              onChange={(e) =>
-                handleEventChange(index, "schedule", e.target.value)
-              }
-              rows={10}
-              cols={50}
-            />
-          </div>
+          <EventInput
+            key={index}
+            index={index}
+            event={event}
+            handleEventChange={handleEventChange}
+          />
         ))}
+
         <button onClick={processSchedules}>Process Schedules</button>
       </div>
 

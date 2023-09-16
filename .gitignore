@@ -25,3 +25,7 @@ yarn-error.log*
 # cypress
 cypress/fixtures/*
 cypress/downloads/*
+
+
+# to be ignored
+src/backups/*

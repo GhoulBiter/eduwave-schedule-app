@@ -11,30 +11,51 @@
   gap: 20px;
 }
 
+.header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.num-courses-input-group {
+  margin-top: 65px;
+}
+
 .inputs-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-around;
   padding-bottom: 20px;
   border-bottom: 2px solid #999;
 }
 
 .inputs-container > label,
 .inputs-container > button {
-  flex: 0 0 100%;  /* Take the full width */
+  flex: 0 0 100%;
 }
 
 .inputs-container > div {
-  flex: 0 0 calc(33.3333% - 20px);  /* 3 items per row minus the gap */
+  flex: 0 0 calc(33.3333% - 20px);
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-label {
-  /* display: block; */
-  /* margin-bottom: 10px; */
 }
 
 label > input {
@@ -43,21 +64,21 @@ label > input {
 
 .input-group {
   display: flex;
-  align-items: center; /* Vertically aligns the label and input in case of height differences */
-  margin-bottom: 10px; /* Add space between groups */
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .input-group label {
-  /* flex: 1; Allows the label to take up the remaining space */
-  margin-right: 10px; /* Add space between the label and the input */
+  margin-right: 10px;
 }
 
 .input-group.textarea-group label {
-  align-self: flex-start; /* Aligns the label to the top of the container */
-  margin-top: 8px; /* Aligns with the top padding of the textarea */
+  align-self: flex-start;
+  margin-top: 8px;
 }
 
-input, textarea {
+input,
+textarea {
   flex: 1;
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -65,29 +86,30 @@ input, textarea {
   font-size: 14px;
   transition: border-color 0.3s, box-shadow 0.3s;
   outline: none;
-  width: 100%; /* For full-width style. If you prefer a smaller width, adjust or remove this. */
-  box-sizing: border-box; /* To ensure padding doesn't increase the total width. */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #0099ff;
   box-shadow: 0 0 5px rgba(0, 153, 255, 0.5);
 }
 
 textarea {
-  resize: vertical; /* Allows vertical resizing only. */
-  min-height: 80px; /* Set minimum height for better usability. */
+  resize: vertical;
+  min-height: 80px;
 }
 
 button {
   font-size: 1.25rem;
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  align-self: flex-end;  /* Align the button to the right */
+  align-self: flex-end;
   transition: background-color 0.2s;
 }
 
@@ -98,6 +120,55 @@ button:hover {
 /* Media Query for responsiveness */
 @media (max-width: 1080px) {
   .inputs-container > div {
-      flex: 0 0 100%;  /* Take the full width */
+    flex: 0 0 100%;
   }
+}
+
+/* Theme Toggle Button Styling */
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid #007bff;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute; or fixed */
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: #007bff;
+}
+
+.theme-toggle:hover {
+  background-color: #007bff;
+}
+
+.theme-toggle:hover svg {
+  fill: #fff;
+}
+
+/* Dark theme */
+body[data-theme="dark"] {
+  background-color: #181818;
+  color: white;
+}
+
+body[data-theme="dark"] .header {
+  background-color: #181818;
+}
+
+body[data-theme="dark"] .theme-toggle {
+  border-color: #0099ff;
+}
+
+body[data-theme="dark"] .theme-toggle svg {
+  fill: #0099ff;
 }
